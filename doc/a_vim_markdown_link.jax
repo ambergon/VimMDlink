@@ -45,6 +45,11 @@ https://github.com/user/a_vim_markdown_link.vim
 
 ==============================================================================
 使い方						*a_vim_markdown_link-usage*
+python3を使用してmarkdown形式で記入された'[title](url)'に対しtitleが空の場合のみ記事タイトルを取得して挿入します
+
+依存関係(python3)
+- urllib3
+- BeautifulSoup4
 
 
 
