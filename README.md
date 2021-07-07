@@ -16,7 +16,6 @@ import BeautifulSoup
 
 Install:
 --------
-pip install git+https://github.com/ambergon/a_vim_markdown_link_py3
 
 License:
 --------
