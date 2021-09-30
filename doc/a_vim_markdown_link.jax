@@ -1,7 +1,7 @@
-*a_vim_markdown_link.txt*	日本語ヘルプ
+*VimMDlink.txt*	日本語ヘルプ
 
-Version :
-Author  :
+Version :0.0.1
+Author  :ambergon
 License : MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
@@ -23,58 +23,61 @@ License : MIT license  {{{
 }}}
 
 ==============================================================================
-目次						*a_vim_markdown_link-contents*
+目次						*VimMDlink-contents*
 
-概要				|a_vim_markdown_link-introduction|
-使い方				|a_vim_markdown_link-usage|
-インターフェイス		|a_vim_markdown_link-interface|
-  コマンド			  |a_vim_markdown_link-commands|
-  関数				  |a_vim_markdown_link-functions|
-TODO				|a_vim_markdown_link-todo|
-更新履歴			|a_vim_markdown_link-changelog|
+概要				|VimMDlink-introduction|
+使い方				|VimMDlink-usage|
+インターフェイス		|VimMDlink-interface|
+  コマンド			  |VimMDlink-commands|
+  関数				  |VimMDlink-functions|
+TODO				|VimMDlink-todo|
+更新履歴			|VimMDlink-changelog|
 
 
 ==============================================================================
-概要						*a_vim_markdown_link-introduction*
+概要						*VimMDlink-introduction*
 
-*a_vim_markdown_link* は
+*VimMDlink*
+はmarkdownテキストにおけるリンクのタイトル部を快適に入力するために作成されたvimプラグインです。
+カーソル行、もしくは選択範囲の`[title](url)`を検索しtitleが空の場合にurlにアクセスして記事のタイトルを挿入します。
 
 最新版:
-https://github.com/user/a_vim_markdown_link.vim
+https://github.com/ambergon/VimMDlink.vim
 
 
 ==============================================================================
-使い方						*a_vim_markdown_link-usage*
-python3を使用してmarkdown形式で記入された'[title](url)'に対しtitleが空の場合のみ記事タイトルを取得して挿入します
+使い方						*VimMDlink-usage*
 
-依存関係(python3)
+
+依存関係
+
 - urllib3
 - BeautifulSoup4
 
 
 
 ==============================================================================
-インターフェイス				*a_vim_markdown_link-interface*
+インターフェイス				*VimMDlink-interface*
 
 ------------------------------------------------------------------------------
-コマンド					*a_vim_markdown_link-commands*
+コマンド					*VimMDlink-commands*
 
-:Alink						*:Alink*
-	現在カーソルがある行を検索し[](http...)にマッチする場合は[]にリンク先タイトルを挿入します
+:MDlink
+カーソル行、選択範囲を検索して置換。
 
 ------------------------------------------------------------------------------
-関数						*a_vim_markdown_link-functions*
+関数						*VimMDlink-functions*
 
-a_vim_markdown_link#get()			*a_vim_markdown_link#get()*
+VimMDlink#get()			*VimMDlink#get()*
 
 
 ==============================================================================
-TODO						*a_vim_markdown_link-todo*
+TODO						*VimMDlink-todo*
 
 
 
 ==============================================================================
-更新履歴					*a_vim_markdown_link-changelog*
+更新履歴					*VimMDlink-changelog*
 
 
 ==============================================================================
