@@ -1,11 +1,25 @@
 # encoding:utf-8
-
 import vim
-#import urllib
-import urllib3
-from bs4 import BeautifulSoup
 import re
 import sys
+
+try:   
+    import urllib3
+except ImportError:   
+    try:
+        vim.command("!pip install urllib3")
+        import urllib3
+    except:   
+        print("install error : urllib3")
+
+try:   
+    from bs4 import BeautifulSoup
+except ImportError:   
+    try:
+        vim.command("!pip install bs4")
+        from bs4 import BeautifulSoup
+    except:   
+        print("install error : bs4_beautifulsoup4")
 
 line = vim.current.line
 
