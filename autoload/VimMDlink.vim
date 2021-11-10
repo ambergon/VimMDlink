@@ -35,7 +35,7 @@ class VimMDlink:
     def __init__(self):
         test = ''
 
-    def get_title():
+    def get_title(self):
         result = ""
         line = vim.current.line
         #一行内に複数ある場合の処理
