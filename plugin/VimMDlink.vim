@@ -1,3 +1,6 @@
+if !has("python3")
+    finish
+endif
 if exists('g:loaded_mdlink')
     finish
 endif
