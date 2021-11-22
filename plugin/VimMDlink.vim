@@ -7,5 +7,8 @@ endif
 let g:loaded_mdlink = 1
 
 ":MDlink
-command! -range MDlink call VimMDlink#get(<line1>,<line2>)
+command! -range MDlink call VimMDlink#get_title(<line1>,<line2>)
+
+":MDlinkCard
+command! -range MDlinkCard call VimMDlink#get_card(<line1>,<line2>)
 
