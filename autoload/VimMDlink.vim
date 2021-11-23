@@ -115,24 +115,22 @@ class VimMDlink:
                 description = ""
                 img_url = ""
 
-                raw_description = soup.find( attrs={ "name" : re.compile("og:description") } )
+                #raw_description = soup.find( attrs={ "name" : re.compile("og:description") } )
                 raw_img_url = soup.find( attrs={ "name" : re.compile("og:image") } )
 
-                if( raw_description != None ):
-                    description = " : " + raw_description["content"].replace("\n","")
+                #if( raw_description != None ):
+                #    description = " : " + raw_description["content"].replace("\n","")
                 if( raw_img_url != None ):
-                    img_url = '<img src="' + str( raw_img_url["content"] ) + '" style="flex-shrink: 0; width: 110px; height: 110px; border-left: 1px solid rgba(0, 0, 0, 0.12); object-fit: cover; border-radius: 0px 15px 15px 0px / 0px 15px 15px 0px ;">'
+                    img_url = '<img src="' + str( raw_img_url["content"] ) + '">'
 
-                text = '''<div>
-    <a href={url} target="_blank" style="text-decoration: none; word-break: break-all; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px ;">
-        <div style="padding: 16px;">
-            <div style="display: -webkit-box; font-size: 16px; font-weight: 600; line-height: 1.5; color: rgba(0, 0, 0, 0.87); overflow: hidden; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{title}</div>
-            <span style="display: -webkit-box; font-size: 12px; line-height: 1.8; color: rgba(0, 0, 0, 0.87); overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;">{url}{description}</span>
-        </div>
+                text = '''<div class="MDlink-card">
+    <a href={url} target="_blank">
+        <span>{title}</span>
     {img_url}</a>
 </div>'''
 
-                result_text = text.format( title = title , url = url , description = description , img_url = img_url )
+                #result_text = text.format( title = title , url = url , description = description , img_url = img_url )
+                result_text = text.format( title = title , url = url , img_url = img_url )
                 result = result + result_text.replace("\n","")
 
             else :
